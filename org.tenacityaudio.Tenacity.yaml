@@ -151,8 +151,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/soundtouch/soundtouch.git
-        tag: 2.3.0
-        commit: c65afe49f697fcea87d9a134870c8d115d7700cc
+        tag: 2.3.1
+        commit: e1f315f5358d9db5cee35a7a2886425489fcefe8
         x-checker-data:
           type: git
           tag-pattern: "^([\\d.]+)$"
