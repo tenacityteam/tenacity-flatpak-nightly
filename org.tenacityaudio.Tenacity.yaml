@@ -62,7 +62,7 @@ modules:
         commit: 9c0a8be1dc32063d91ed1901fd5fcd54f4f955a1
         x-checker-data:
           type: git
-          tag-pattern: "^v([\\d.]+)$"
+          tag-pattern: ^v([\d.]+)$
 
   - deps/lame-3.100.json
 
@@ -75,7 +75,7 @@ modules:
         commit: 1cc101e90dda1fb6e8cc57a0c707a3305bf674f9
         x-checker-data:
           type: git
-          tag-pattern: "^([\\d.]+)$"
+          tag-pattern: ^([\d.]+)$
 
   - shared-modules/libmad/libmad.json
   - shared-modules/linux-audio/jack2.json
@@ -92,7 +92,7 @@ modules:
         commit: 147dd722548358763a8b649b3e4b41dfffbcfbb6
         x-checker-data:
           type: git
-          tag-pattern: "^v([\\d.]+)$"
+          tag-pattern: ^v([\d.]+)$
 
   - name: portsmf
     buildsystem: cmake-ninja
@@ -103,7 +103,7 @@ modules:
         commit: 951b636f7d0cba370d483a91f1897c71f3d98530
         x-checker-data:
           type: git
-          tag-pattern: "^([\\d.]+)$"
+          tag-pattern: ^([\d.]+)$
 
   - name: portmidi-mixxxdj
     buildsystem: cmake-ninja
@@ -114,7 +114,7 @@ modules:
         commit: fda97c3be2baf10438574d10bb2a6b8b4f1140c4
         x-checker-data:
           type: git
-          tag-pattern: "^([\\d.]+)$"
+          tag-pattern: ^([\d.]+)$
 
   - name: soxr
     buildsystem: cmake-ninja
@@ -125,7 +125,7 @@ modules:
         commit: 945b592b70470e29f917f4de89b4281fbbd540c0
         x-checker-data:
           type: git
-          tag-pattern: "^([\\d.]+)$"
+          tag-pattern: ^([\d.]+)$
 
   - name: libsbsms
     buildsystem: cmake-ninja
@@ -136,7 +136,7 @@ modules:
         commit: e99cd7e6c6367e476577be34d2fdbe2023904d7e
         x-checker-data:
           type: git
-          tag-pattern: "^([\\d.]+)$"
+          tag-pattern: ^([\d.]+)$
 
   - name: vamp-plugin-sdk
     sources:
@@ -155,7 +155,7 @@ modules:
         commit: e1f315f5358d9db5cee35a7a2886425489fcefe8
         x-checker-data:
           type: git
-          tag-pattern: "^([\\d.]+)$"
+          tag-pattern: ^([\d.]+)$
 
   - name: twolame
     sources:
@@ -180,7 +180,7 @@ modules:
       - type: git
         branch: master
         url: https://github.com/tenacityteam/tenacity.git
-        commit: 0f131bf848a928db7f569ec8e4d54caea28bb521
+        commit: 0ccf25c27d9dc4c2c385abc0a3bb9251a339430b
       - type: patch
         path: patches/audacity-suil-fix.patch
       - type: shell
