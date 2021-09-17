@@ -60,6 +60,9 @@ modules:
         url: https://github.com/wxWidgets/wxWidgets
         tag: v3.1.5
         commit: 9c0a8be1dc32063d91ed1901fd5fcd54f4f955a1
+        x-checker-data:
+          type: git
+          tag-pattern: "^v([\\d.]+)$"
 
   - deps/lame-3.100.json
 
@@ -70,6 +73,9 @@ modules:
         url: https://github.com/tenacityteam/libid3tag.git
         tag: 0.16.1
         commit: 1cc101e90dda1fb6e8cc57a0c707a3305bf674f9
+        x-checker-data:
+          type: git
+          tag-pattern: "^([\\d.]+)$"
 
   - shared-modules/libmad/libmad.json
   - shared-modules/linux-audio/jack2.json
@@ -84,6 +90,9 @@ modules:
         url: https://github.com/PortAudio/portaudio.git
         tag: v19.7.0
         commit: 147dd722548358763a8b649b3e4b41dfffbcfbb6
+        x-checker-data:
+          type: git
+          tag-pattern: "^v([\\d.]+)$"
 
   - name: portsmf
     buildsystem: cmake-ninja
@@ -92,6 +101,9 @@ modules:
         url: https://github.com/tenacityteam/portsmf.git
         tag: '239'
         commit: 951b636f7d0cba370d483a91f1897c71f3d98530
+        x-checker-data:
+          type: git
+          tag-pattern: "^([\\d.]+)$"
 
   - name: portmidi-mixxxdj
     buildsystem: cmake-ninja
@@ -100,6 +112,9 @@ modules:
         url: https://github.com/mixxxdj/portmidi.git
         tag: '236'
         commit: fda97c3be2baf10438574d10bb2a6b8b4f1140c4
+        x-checker-data:
+          type: git
+          tag-pattern: "^([\\d.]+)$"
 
   - name: soxr
     buildsystem: cmake-ninja
@@ -108,6 +123,9 @@ modules:
         url: https://github.com/chirlu/soxr.git
         tag: 0.1.3
         commit: 945b592b70470e29f917f4de89b4281fbbd540c0
+        x-checker-data:
+          type: git
+          tag-pattern: "^([\\d.]+)$"
 
   - name: libsbsms
     buildsystem: cmake-ninja
@@ -116,6 +134,9 @@ modules:
         url: https://github.com/claytonotey/libsbsms.git
         tag: 2.3.0
         commit: e99cd7e6c6367e476577be34d2fdbe2023904d7e
+        x-checker-data:
+          type: git
+          tag-pattern: "^([\\d.]+)$"
 
   - name: vamp-plugin-sdk
     sources:
@@ -132,6 +153,9 @@ modules:
         url: https://gitlab.com/soundtouch/soundtouch.git
         tag: 2.3.0
         commit: c65afe49f697fcea87d9a134870c8d115d7700cc
+        x-checker-data:
+          type: git
+          tag-pattern: "^([\\d.]+)$"
 
   - name: twolame
     sources:
