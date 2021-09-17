@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST_PATH: # Path to manifest
+  MANIFEST_PATH: org.tenacityaudio.Tenacity.yaml # Path to manifest
   REPO: # link to project repository (optional)
 
 jobs:
