@@ -3,7 +3,6 @@ runtime: org.freedesktop.Platform
 runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
 command: tenacity
-rename-desktop-file: tenacity.desktop
 rename-icon: tenacity
 rename-appdata-file: tenacity.metainfo.xml
 finish-args:
@@ -170,7 +169,7 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DWX_CONFIG=/app/bin/wx-config
     post-install:
-      - install -Dm644 ../help/tenacity.metainfo.xml -t /app/share/metainfo
+      - install -Dm644 ../help/org.tenacityaudio.Tenacity.metainfo.xml -t /app/share/metainfo
       - install -d /app/extensions/Plugins
     cleanup:
       - /share/tenacity/include
@@ -185,4 +184,4 @@ modules:
         path: patches/audacity-suil-fix.patch
       - type: shell
         commands:
-          - sed -e '43i <release version="master" date="2021-09-05"/>' -i help/tenacity.metainfo.xml
+          - sed -e '43i <release version="master" date="2021-09-05"/>' -i help/org.tenacityaudio.Tenacity.metainfo.xml
