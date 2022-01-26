@@ -6,32 +6,32 @@
       "Images": [
         {
           "Name": "ghcr.io/tenacityteam/tenacity-flatpak-nightly",
-          "Digest": "sha256:38c736399696d4c406e3eb2b29c080c3651f191f18dcbd5a6859542a55e1fd99",
+          "Digest": "sha256:5c33df3f4c67d7b902ac588e9cf6afcfb29bb8ec691352e8e06a96967426d735",
           "RepoTags": [
             "nightly"
           ],
-          "Created": "2022-01-25T15:25:56Z",
+          "Created": "2022-01-26T04:28:20Z",
           "DockerVersion": "",
           "Labels": {
             "org.flatpak.body": "Name: org.tenacityaudio.Tenacity\nArch: x86_64\nBranch: nightly\nBuilt with: Flatpak 1.12.4\n",
-            "org.flatpak.commit": "a1902fc268ab19fa10264bd264a1c1dfd0f6ccfd02600d66fba3881987741576",
+            "org.flatpak.commit": "d63097d8de14d9f4fc534a23480e4ad044cc3e55ed75dcd98add8c7f65041a13",
             "org.flatpak.commit-metadata.ostree.collection-binding": "AABz",
             "org.flatpak.commit-metadata.ostree.ref-binding": "YXBwL29yZy50ZW5hY2l0eWF1ZGlvLlRlbmFjaXR5L3g4Nl82NC9uaWdodGx5AC4AYXM=",
-            "org.flatpak.commit-metadata.xa.download-size": "AAAAAADZnKkAdA==",
+            "org.flatpak.commit-metadata.xa.download-size": "AAAAAADZnLAAdA==",
             "org.flatpak.commit-metadata.xa.installed-size": "AAAAAAJtrAAAdA==",
             "org.flatpak.commit-metadata.xa.metadata": "W0FwcGxpY2F0aW9uXQpuYW1lPW9yZy50ZW5hY2l0eWF1ZGlvLlRlbmFjaXR5CnJ1bnRpbWU9b3JnLmZyZWVkZXNrdG9wLlBsYXRmb3JtL3g4Nl82NC8yMS4wOApzZGs9b3JnLmZyZWVkZXNrdG9wLlNkay94ODZfNjQvMjEuMDgKY29tbWFuZD10ZW5hY2l0eQoKW0NvbnRleHRdCnNoYXJlZD1pcGM7CnNvY2tldHM9eDExO3dheWxhbmQ7cHVsc2VhdWRpbztmYWxsYmFjay14MTE7CmRldmljZXM9YWxsOwpmaWxlc3lzdGVtcz14ZGctcnVuL3BpcGV3aXJlLTA7aG9zdDsKCltTeXN0ZW0gQnVzIFBvbGljeV0Kb3JnLmZyZWVkZXNrdG9wLlJlYWx0aW1lS2l0MT10YWxrCgpbRW52aXJvbm1lbnRdClZTVF9QQVRIPS9hcHAvZXh0ZW5zaW9ucy9QbHVnaW5zL2x4dnN0CkFMU0FfQ09ORklHX1BBVEg9CkxBRFNQQV9QQVRIPS9hcHAvZXh0ZW5zaW9ucy9QbHVnaW5zL2xhZHNwYQpMVjJfUEFUSD0vYXBwL2V4dGVuc2lvbnMvUGx1Z2lucy9sdjIKCltFeHRlbnNpb24gb3JnLmZyZWVkZXNrdG9wLkxpbnV4QXVkaW8uUGx1Z2luc10KZGlyZWN0b3J5PWV4dGVuc2lvbnMvUGx1Z2lucwpuby1hdXRvZG93bmxvYWQ9dHJ1ZQpzdWJkaXJlY3Rvcmllcz10cnVlCmFkZC1sZC1wYXRoPWxpYgptZXJnZS1kaXJzPWxhZHNwYTtsdjI7bHh2c3QKdmVyc2lvbj0yMC4wOAoKW0V4dGVuc2lvbiBvcmcudGVuYWNpdHlhdWRpby5UZW5hY2l0eS5Mb2NhbGVdCmRpcmVjdG9yeT1zaGFyZS9ydW50aW1lL2xvY2FsZQphdXRvZGVsZXRlPXRydWUKbG9jYWxlLXN1YnNldD10cnVlCgpbRXh0ZW5zaW9uIG9yZy50ZW5hY2l0eWF1ZGlvLlRlbmFjaXR5LkRlYnVnXQpkaXJlY3Rvcnk9bGliL2RlYnVnCmF1dG9kZWxldGU9dHJ1ZQpuby1hdXRvZG93bmxvYWQ9dHJ1ZQoKW0J1aWxkXQpidWlsdC1leHRlbnNpb25zPW9yZy50ZW5hY2l0eWF1ZGlvLlRlbmFjaXR5LkxvY2FsZTtvcmcudGVuYWNpdHlhdWRpby5UZW5hY2l0eS5EZWJ1ZzsAAHM=",
             "org.flatpak.commit-metadata.xa.ref": "YXBwL29yZy50ZW5hY2l0eWF1ZGlvLlRlbmFjaXR5L3g4Nl82NC9uaWdodGx5AABz",
-            "org.flatpak.download-size": "14158098",
+            "org.flatpak.download-size": "14158068",
             "org.flatpak.installed-size": "40741888",
             "org.flatpak.metadata": "[Application]\nname=org.tenacityaudio.Tenacity\nruntime=org.freedesktop.Platform/x86_64/21.08\nsdk=org.freedesktop.Sdk/x86_64/21.08\ncommand=tenacity\n\n[Context]\nshared=ipc;\nsockets=x11;wayland;pulseaudio;fallback-x11;\ndevices=all;\nfilesystems=xdg-run/pipewire-0;host;\n\n[System Bus Policy]\norg.freedesktop.RealtimeKit1=talk\n\n[Environment]\nVST_PATH=/app/extensions/Plugins/lxvst\nALSA_CONFIG_PATH=\nLADSPA_PATH=/app/extensions/Plugins/ladspa\nLV2_PATH=/app/extensions/Plugins/lv2\n\n[Extension org.freedesktop.LinuxAudio.Plugins]\ndirectory=extensions/Plugins\nno-autodownload=true\nsubdirectories=true\nadd-ld-path=lib\nmerge-dirs=ladspa;lv2;lxvst\nversion=20.08\n\n[Extension org.tenacityaudio.Tenacity.Locale]\ndirectory=share/runtime/locale\nautodelete=true\nlocale-subset=true\n\n[Extension org.tenacityaudio.Tenacity.Debug]\ndirectory=lib/debug\nautodelete=true\nno-autodownload=true\n\n[Build]\nbuilt-extensions=org.tenacityaudio.Tenacity.Locale;org.tenacityaudio.Tenacity.Debug;",
             "org.flatpak.ref": "app/org.tenacityaudio.Tenacity/x86_64/nightly",
             "org.flatpak.subject": "Export org.tenacityaudio.Tenacity",
-            "org.flatpak.timestamp": "1643124356"
+            "org.flatpak.timestamp": "1643171300"
           },
           "Architecture": "amd64",
           "Os": "linux",
           "Layers": [
-            "sha256:3d4909cc4225a1af7344964193f63397bed501ceada5b3a8763b592ea1b61689"
+            "sha256:d741d89ed085d67ec4e3d765b7824c344ba906d89fd2372217cfb7e5bde1b269"
           ],
           "Env": null
         }
