@@ -179,7 +179,7 @@ modules:
       - type: git
         branch: master
         url: https://github.com/tenacityteam/tenacity.git
-        commit: 40d57bcf6237768b30be3c1ae9769e7753652843
+        commit: adc300a2bdf9aa5fde03d5a12d9c99c4703f5abd
       - type: patch
         path: patches/audacity-suil-fix.patch
       - type: shell
