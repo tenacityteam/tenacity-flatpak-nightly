@@ -70,8 +70,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/tenacityteam/libid3tag.git
-        tag: 0.16.1
-        commit: 1cc101e90dda1fb6e8cc57a0c707a3305bf674f9
+        tag: 0.16.2
+        commit: 3df1882b76c2f44a274af1af33497125c95679b9
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
