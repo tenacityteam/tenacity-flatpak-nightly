@@ -1,4 +1,4 @@
-app-id: org.tenacityaudio.Tenacity
+https://github.com/PortAudio/portaudio/commit/605fc89d5763b3d7bfd4803531a23c359a668b73app-id: org.tenacityaudio.Tenacity
 runtime: org.freedesktop.Platform
 runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
@@ -57,8 +57,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/wxWidgets/wxWidgets
-        tag: v3.2.0
-        commit: 5b5ec3804a31a3765d60ff351bbdf79eddb1e1f9
+        tag: v3.2.1
+        commit: 97e99707c5d2271a70cb686720b48dbf34ced496
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -104,13 +104,13 @@ modules:
           type: git
           tag-pattern: ^([\d.]+)$
 
-  - name: portmidi-mixxxdj
+  - name: portmidi
     buildsystem: cmake-ninja
     sources:
       - type: git
-        url: https://github.com/mixxxdj/portmidi.git
-        tag: '236'
-        commit: fda97c3be2baf10438574d10bb2a6b8b4f1140c4
+        url: https://github.com/PortMidi/portmidi.git
+        tag: v2.0.4
+        commit: b808babecdc5d05205467dab5c1006c5ac0fdfd4
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
@@ -150,8 +150,8 @@ modules:
     sources:
       - type: git
         url: https://codeberg.org/soundtouch/soundtouch.git
-        tag: 2.3.1
-        commit: e1f315f5358d9db5cee35a7a2886425489fcefe8
+        tag: 2.3.2
+        commit: 29fba832a7920a04eab956b3990c50e13d8c93f9
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
