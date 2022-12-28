@@ -1,6 +1,6 @@
 app-id: org.tenacityaudio.Tenacity
 runtime: org.freedesktop.Platform
-runtime-version: '21.08'
+runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
 command: tenacity
 rename-icon: tenacity
@@ -177,11 +177,11 @@ modules:
       - /share/pixmaps
     sources:
       - type: git
-        branch: master
-        url: https://github.com/tenacityteam/tenacity.git
-        commit: 91f8b4340b159af551fff94a284c6b0f704a7932
+        branch: main
+        url: https://codeberg.org/tenacityteam/tenacity.git
+        commit: 8008400fd341e274c616e0479420c85fd6114ad6
       - type: patch
         path: patches/audacity-suil-fix.patch
       - type: shell
         commands:
-          - sed -e '43i <release version="master" date="2021-09-05"/>' -i help/org.tenacityaudio.Tenacity.metainfo.xml
+          - sed -e '43i <release version="master" date="2022-12-27"/>' -i help/org.tenacityaudio.Tenacity.metainfo.xml
