@@ -29,7 +29,6 @@ jobs:
     - name: Install flatpak-builder
       run: |
         set -e
-        sudo add-apt-repository -y ppa:alexlarsson/flatpak
         sudo apt update -y
         sudo apt install -y flatpak-builder
 
