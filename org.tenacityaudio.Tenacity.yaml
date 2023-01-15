@@ -4,31 +4,27 @@ runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
 command: tenacity
 rename-icon: tenacity
+rename-desktop-file: tenacity.desktop
 rename-appdata-file: tenacity.metainfo.xml
 finish-args:
   - --share=ipc
-  - --socket=fallback-x11
-  - --socket=wayland
+  - --socket=x11
   - --socket=pulseaudio
   - --filesystem=xdg-run/pipewire-0
-  - --system-talk-name=org.freedesktop.RealtimeKit1
-  - --device=all # ALSA
+  - --device=all
   - --filesystem=host
   - --env=ALSA_CONFIG_PATH=
   - --env=LADSPA_PATH=/app/extensions/Plugins/ladspa
   - --env=LV2_PATH=/app/extensions/Plugins/lv2
-  # Audacity uses VST_PATH
-  - --env=VST_PATH=/app/extensions/Plugins/lxvst
-
+  - --env=VST_PATH=/app/extensions/Plugins/vst
 add-extensions:
   org.freedesktop.LinuxAudio.Plugins:
     directory: extensions/Plugins
     version: '22.08'
     add-ld-path: lib
-    merge-dirs: ladspa;lv2;lxvst
+    merge-dirs: ladspa;lv2;vst
     subdirectories: true
     no-autodownload: true
-
 cleanup:
   - /include
   - /lib/pkgconfig
@@ -69,7 +65,7 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: git
-        url: https://github.com/tenacityteam/libid3tag.git
+        url: https://codeberg.org/tenacityteam/libid3tag.git
         tag: 0.16.2
         commit: 3df1882b76c2f44a274af1af33497125c95679b9
         x-checker-data:
@@ -77,7 +73,6 @@ modules:
           tag-pattern: ^([\d.]+)$
 
   - shared-modules/libmad/libmad.json
-  - shared-modules/linux-audio/jack2.json
   - shared-modules/linux-audio/lv2.json
   - shared-modules/linux-audio/lilv.json
   - deps/suil.json
@@ -104,13 +99,13 @@ modules:
           type: git
           tag-pattern: ^([\d.]+)$
 
-  - name: portmidi
+  - name: portmidi-mixxxdj
     buildsystem: cmake-ninja
     sources:
       - type: git
-        url: https://github.com/PortMidi/portmidi.git
-        tag: v2.0.4
-        commit: b808babecdc5d05205467dab5c1006c5ac0fdfd4
+        url: https://github.com/mixxxdj/portmidi.git
+        tag: '236'
+        commit: fda97c3be2baf10438574d10bb2a6b8b4f1140c4
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
@@ -138,6 +133,7 @@ modules:
           tag-pattern: ^([\d.]+)$
 
   - name: vamp-plugin-sdk
+    no-parallel-make: true
     sources:
       - type: git
         url: https://github.com/c4dm/vamp-plugin-sdk.git
@@ -145,7 +141,6 @@ modules:
         commit: 67adfc2bf9486912a0fce5123cf54360ea2678bc
     cleanup:
       - /bin
-
   - name: soundtouch
     sources:
       - type: git
@@ -161,7 +156,6 @@ modules:
       - type: archive
         url: https://github.com/njh/twolame/releases/download/0.4.0/twolame-0.4.0.tar.gz
         sha256: cc35424f6019a88c6f52570b63e1baf50f62963a3eac52a03a800bb070d7c87d
-
   - name: tenacity
     buildsystem: cmake-ninja
     builddir: true
@@ -169,7 +163,6 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DWX_CONFIG=/app/bin/wx-config
     post-install:
-      - install -Dm644 ../help/org.tenacityaudio.Tenacity.metainfo.xml -t /app/share/metainfo
       - install -d /app/extensions/Plugins
     cleanup:
       - /share/tenacity/include
@@ -177,11 +170,5 @@ modules:
       - /share/pixmaps
     sources:
       - type: git
-        branch: main
         url: https://codeberg.org/tenacityteam/tenacity.git
-        commit: 8008400fd341e274c616e0479420c85fd6114ad6
-      - type: patch
-        path: patches/audacity-suil-fix.patch
-      - type: shell
-        commands:
-          - sed -e '43i <release version="master" date="2022-12-27"/>' -i help/org.tenacityaudio.Tenacity.metainfo.xml
+        commit: cff4018921b2f80039bc4fb1b60cdea9be93a1f0
