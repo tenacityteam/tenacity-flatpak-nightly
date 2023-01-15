@@ -92,7 +92,7 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: git
-        url: https://github.com/tenacityteam/portsmf.git
+        url: https://codeberg.org/tenacityteam/portsmf
         tag: '239'
         commit: 951b636f7d0cba370d483a91f1897c71f3d98530
         x-checker-data:
