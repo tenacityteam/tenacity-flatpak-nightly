@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         submodules: true
 
@@ -45,7 +45,7 @@ jobs:
         flatpak-builder --default-branch=${FLATPAK_BRANCH} --download-only /dev/null ${MANIFEST_PATH}
 
     - name: Prime cache
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: |
           .flatpak-builder/ccache
@@ -59,7 +59,7 @@ jobs:
         flatpak-builder --default-branch=${FLATPAK_BRANCH} --disable-updates --disable-download --ccache --sandbox --repo=${FLATPAK_BUILD_REPO} ${FLATPAK_BUILD_DIR} ${MANIFEST_PATH}
 
     - name: Upload flatpak repo
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
         name: ${{ env.FLATPAK_BUILD_REPO }}
         path: ${{ env.FLATPAK_BUILD_REPO }}
@@ -69,7 +69,7 @@ jobs:
     needs: build
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Install flatpak
       run: |
@@ -79,7 +79,7 @@ jobs:
         sudo apt install -y flatpak
 
     - name: Download flatpak repo
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v3
       with:
         name: ${{ env.FLATPAK_BUILD_REPO }}
 
@@ -90,7 +90,7 @@ jobs:
         flatpak build-bundle --runtime-repo=https://flathub.org/repo/flathub.flatpakrepo ${FLATPAK_BUILD_REPO} ${FLATPAK_BUNDLE}.flatpak ${APP_ID} ${FLATPAK_BRANCH}
 
     - name: Upload flatpak bundle
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
         name: ${{ env.FLATPAK_BUNDLE }}
         path: ${{ env.FLATPAK_BUNDLE }}.flatpak
@@ -101,7 +101,7 @@ jobs:
     needs: build
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Install flatpak and libcontainers tools
       run: |
@@ -114,7 +114,7 @@ jobs:
         sudo apt install -y skopeo flatpak jq
 
     - name: Download flatpak repo
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v3
       with:
         name: ${{ env.FLATPAK_BUILD_REPO }}
 
