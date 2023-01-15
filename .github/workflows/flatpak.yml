@@ -53,6 +53,12 @@ jobs:
         restore-keys: |
           flatpak-builder-
 
+    # In Ubuntu, Git no longer allows you to add a submodule via file:///
+    # transport. As a fix, run git config --global protocol.file.allow always
+    - name: Fix Git
+      run: |
+        git config --global protocol.file.allow always
+
     - name: Build flatpak
       run: |
         set -e
